@@ -1,0 +1,6 @@
+<p>Welcome to Library System</p>
+<p>What would You like to read today?</p>
+<input type="text" [(ngModel)]="searchedText" placeholder="Enter your desired read for today" style="width:100%">
+<button (click)="onClick()">Submit</button>
+<hr>
+<p *ngIf="displayResult">You have searched for {{searchedText}}</p>
