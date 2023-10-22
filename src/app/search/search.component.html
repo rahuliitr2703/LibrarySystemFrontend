@@ -2,8 +2,8 @@
     <h4 style="text-align: center;margin: 15px 0px;font-family: initial;">What would You like to read today?</h4>
     <form #searchForm="ngForm" class="d-flex flex-row row" (ngSubmit)="getSearchBook(searchForm.value)">
         <div class="col-3 form-group">
-            <label for="exampleInputBook">Book</label>
-            <input type="text" class="form-control" name='book' ngModel placeholder="Enter BooK">
+            <label for="exampleInputTitle">Title</label>
+            <input type="text" class="form-control" name='title' ngModel placeholder="Enter Title">
         </div>
         <div class="col-3 form-group">
             <label for="exampleInputAuthor">Author</label>

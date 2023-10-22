@@ -1,10 +1,61 @@
 <tabset>
-    <tab heading="Search">
+    <tab heading="Search" class="container">
         <search></search>
-        <!-- <p>Shivani works!</p> -->
+        <hr>
+        <div>
+            <div class="card bg-primary text-white p-1 text-center" style="width: 100%;">All Book</div>
+            <div>
+                <div class="card">
+                    <img src="assets/images/book1.jpg" alt="Book Cover">
+                    <p class="title">Book Title</p>
+                    <p class="author">Author Name</p>
+                    <p class="price">$19.99</p>
+                    <button class="buy-button" id='1' (click)="addBookToCart(1)">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/book1.jpg" alt="Book Cover">
+                    <p class="title">Book Title</p>
+                    <p class="author">Author Name</p>
+                    <p class="price">$19.99</p>
+                    <button class="buy-button" id='2' (click)="addBookToCart(2)">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/book1.jpg" alt="Book Cover">
+                    <p class="title">Book Title</p>
+                    <p class="author">Author Name</p>
+                    <p class="price">$19.99</p>
+                    <button class="buy-button" id='3' (click)="addBookToCart(3)">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/book1.jpg" alt="Book Cover">
+                    <p class="title">Book Title</p>
+                    <p class="author">Author Name</p>
+                    <p class="price">$19.99</p>
+                    <button class="buy-button" id='4' (click)="addBookToCart(4)">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/book1.jpg" alt="Book Cover">
+                    <p class="title">Book Title</p>
+                    <p class="author">Author Name</p>
+                    <p class="price">$19.99</p>
+                    <button class="buy-button" id='5' (click)="addBookToCart(5)">Buy Now</button>
+                </div>
+                <div class="card">
+                    <img src="assets/images/book1.jpg" alt="Book Cover">
+                    <p class="title">Book Title</p>
+                    <p class="author">Author Name</p>
+                    <p class="price">$19.99</p>
+                    <button class="buy-button" id='6' (click)="addBookToCart(6)">Buy Now</button>
+                </div>
+            </div>
+        </div>
     </tab>
     <tab heading="Buyer Profile">
-        <!-- <search></search> -->
         <p>Rahul works!</p>
+    </tab>
+    <tab heading="Cart">
+        <div *ngIf="cart.length > 0">
+            <p *ngFor="let val of cart">{{val}}</p>
+        </div>
     </tab>
 </tabset>

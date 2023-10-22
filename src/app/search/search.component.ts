@@ -10,11 +10,11 @@ export class SearchComponent {
   constructor(private dataService: DataServiceService){}
   books = [];
   data = {
-    'book': '',
-    'author': '',
-    'minPrice': '',
-    'maxPrice': '',
-    'genre': ''
+    'title': null,
+    'author': null,
+    'minPrice': null,
+    'maxPrice': null,
+    'genre': null
   };
 
   ngOnInit(){
