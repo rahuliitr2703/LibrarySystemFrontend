@@ -1,6 +1,27 @@
-<p>Welcome to Library System</p>
-<p>What would You like to read today?</p>
-<input type="text" [(ngModel)]="searchedText" placeholder="Enter your desired read for today" style="width:100%">
-<button (click)="onClick()">Submit</button>
-<hr>
-<p *ngIf="displayResult">You have searched for {{searchedText}}</p>
+<div>
+    <h4 style="text-align: center;margin: 15px 0px;font-family: initial;">What would You like to read today?</h4>
+    <form #searchForm="ngForm" class="d-flex flex-row row" (ngSubmit)="getSearchBook(searchForm.value)">
+        <div class="col-3 form-group">
+            <label for="exampleInputBook">Book</label>
+            <input type="text" class="form-control" name='book' ngModel placeholder="Enter BooK">
+        </div>
+        <div class="col-3 form-group">
+            <label for="exampleInputAuthor">Author</label>
+            <input type="text" class="form-control" name='author' ngModel placeholder="Enter Author">
+        </div>
+        <div class="col-3 form-group">
+            <label for="exampleInputGenre">Genre</label>
+            <input type="text" class="form-control" name='genre' ngModel placeholder="Enter Genre">
+        </div>
+        <div class="col-1 form-group">
+            <label for="exampleInputPriceRange">Price Range</label>
+            <input type="number" class="form-control" name='minPrice' ngModel placeholder="Min">
+        </div>
+        <div class="col-1 form-group" style="padding-top: 22px">
+            <input type="number" class="form-control" name='maxPrice' ngModel placeholder="Max">
+        </div>
+        <div class="col-1 form-group" style="padding-top: 13px;">
+            <button type="submit" class="btn btn-primary m-2">Submit</button>
+        </div>
+    </form>
+</div>
